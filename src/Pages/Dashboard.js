@@ -23,6 +23,7 @@ const Dashboard = () => {
   const headers = {
     Authorization: `Bearer ${localStorage.getItem("token")}`,
   };
+  console.log(process.env.REACT_APP_URL, "as")
 
   useEffect(() => {
     const apiCalls = [
