@@ -8,8 +8,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const clientId =
-    "480547441435-v94trieukkbeivtrr3no9k4urooolujg.apps.googleusercontent.com";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [PasswordInputType, ToggleIcon] = usePasswordToggle();
@@ -45,15 +43,6 @@ const Login = () => {
         console.log(error.data);
       });
   };
-  useEffect(() => {
-    function start() {
-      gapi.client.init({
-        clientId: clientId,
-        scope: "",
-      });
-    }
-    gapi.load("client:auth2", start);
-  }, []);
 
   // Formik initial values
   const initialValues = {
