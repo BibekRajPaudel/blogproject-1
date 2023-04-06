@@ -34,7 +34,7 @@ const Listview = ({ rowsPerPage, page }) => {
 
   const fetchPost = async () => {
     try {
-      let res = await axios.get("http://localhost:4000/api/v1/posts/getAll");
+      let res = await axios.get(`${process.env.REACT_APP_URL}/posts/getAll`);
       setData(res.data.post);
     } catch (err) {
       console.error(err);

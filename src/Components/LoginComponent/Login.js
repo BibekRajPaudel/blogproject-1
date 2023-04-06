@@ -16,7 +16,7 @@ const Login = () => {
 
   const loginAdmin = (data) => {
     axios
-      .post("http://localhost:4000/api/v1/login", data, {
+      .post(`${process.env.REACT_APP_URL}/login`, data, {
         headers: { "Content-Type": "application/json" },
       })
       .then((res) => {

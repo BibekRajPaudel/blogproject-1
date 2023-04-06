@@ -136,6 +136,7 @@ const PackageForm = () => {
       formData.append("category", category);
       formData.append("tag", tag);
 
+      console.log(process.env.REACT_APP_URL, "vps hosting")
       await axios.post(`${process.env.REACT_APP_URL}/post`, formData, {
         headers: {
           "content-Type": "multipart/form-data",

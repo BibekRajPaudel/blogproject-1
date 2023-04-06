@@ -25,7 +25,7 @@ const Topbar = () => {
   useEffect(() => {
     // get employee details
     axios
-      .get("http://localhost:4000/api/v1/posts/getAll")
+      .get(`${process.env.REACT_APP_URL}/posts/getAll`)
       .then((res) => {
         setEmployeeDetails(res.data);
       });

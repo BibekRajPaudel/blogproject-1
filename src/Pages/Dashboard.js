@@ -26,11 +26,11 @@ const Dashboard = () => {
 
   useEffect(() => {
     const apiCalls = [
-      axios.get("http://localhost:4000/api/v1/posts/getAll"),
-      axios.get("http://localhost:4000/api/v1/samachar"),
-      axios.get("http://localhost:4000/api/v1/bank-market"),
-      axios.get("http://localhost:4000/api/v1/philosophy"),
-      axios.get("http://localhost:4000/api/v1/additional"),
+      axios.get(`${process.env.REACT_APP_URL}/posts/getAll`),
+      axios.get(`${process.env.REACT_APP_URL}/samachar`),
+      axios.get(`${process.env.REACT_APP_URL}/bank-market`),
+      axios.get(`${process.env.REACT_APP_URL}/philosophy`),
+      axios.get(`${process.env.REACT_APP_URL}/additional`),
     ];
 
     Promise.all(apiCalls)

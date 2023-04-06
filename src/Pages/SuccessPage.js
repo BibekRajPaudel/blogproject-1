@@ -44,7 +44,7 @@ const SuccessPage = () => {
     }
     const patchData = (value, id) => {
         console.log(value)
-        axios.put(`http://localhost:3000/api/v1/updateStatus/${id}`, { status: value }).then((res) => {
+        axios.put(`${process.env.REACT_APP_URL}/updateStatus/${id}`, { status: value }).then((res) => {
             toast.success("Lead status updated");
             setTimeout(() => {
                 window.location.reload(true)
