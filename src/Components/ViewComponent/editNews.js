@@ -32,6 +32,7 @@ const EditNews = ({item}) => {
     setTag(event.target.value);
   };
 
+
   const formik = useFormik({
     initialValues: {
       title: item.title,
@@ -43,7 +44,7 @@ const EditNews = ({item}) => {
       description6: item.description6,
       author: item.author,
       subDescription: item.subDescription,
-      category: item.category,
+      category: item.category[0],
       image1: item.image1[0],
       image2: item.image2[0],
       image3: item.image3[0],
@@ -113,8 +114,6 @@ const EditNews = ({item}) => {
           formData.append("image6", image6[i]);
         }
       }
-
-      console.log(title, "title")
       
       
       formData.append("title", title);
@@ -128,11 +127,6 @@ const EditNews = ({item}) => {
       formData.append("subDescription", subDescription);
       formData.append("category", category);
       formData.append("tag", tag);
-
-      for (let key of formData.entries()) {
-        console.log(key[0] + ', ' + key[1]);
-    }
-    
     
       await axios.put(`${process.env.REACT_APP_URL}/updatenews/${item._id}`, formData, {
         headers: {
@@ -389,7 +383,8 @@ const EditNews = ({item}) => {
                 <option className="text-gray-400" value="None">
                   -- एक विकल्प छान्नुहोस् --
                 </option>
-                <option value="news">अर्थ</option>
+                <option value="news">समाचार</option>
+                <option value="wealth">अर्थ</option>
                 <option value="bank-market">बैंक / बजार</option>
                 <option value="philosophy">दर्शन संवाद</option>
                 <option value="startup">स्टार्टअप</option>
@@ -432,9 +427,18 @@ const EditNews = ({item}) => {
                 <option value="fuel">इन्धन</option>
                 <option value="interview">अन्तरर्वाता</option>
                 <option value="report">रिपोर्ट</option>
-                <option value="Analysis">विश्लेषण</option>
+                <option value="analysis">विश्लेषण</option>
                 <option value="blog">ब्लक</option>
                 <option value="Hotel">होटल</option>
+                <option value="biography">जिवनी</option>
+                <option value="economy">अर्थतन्त्र </option>
+                <option value="tourism">पर्यटन</option>
+                <option value="technique">प्रविधी</option>
+                <option value="corporatemarket">कर्पाेरेट बजार</option>
+                <option value="photo/feature">फोटो/फिचर </option>
+                <option value="employment">रोजगार</option>
+                <option value="international"> अन्तर्राष्ट्रिय</option>
+                <option value="newspaper">पत्रपत्रिका</option>
               </select>
             </div>
           </div>

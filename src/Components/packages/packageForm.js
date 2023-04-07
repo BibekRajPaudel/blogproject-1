@@ -136,7 +136,6 @@ const PackageForm = () => {
       formData.append("category", category);
       formData.append("tag", tag);
 
-      console.log(process.env.REACT_APP_URL, "vps hosting")
       await axios.post(`${process.env.REACT_APP_URL}/post`, formData, {
         headers: {
           "content-Type": "multipart/form-data",
@@ -425,8 +424,9 @@ const PackageForm = () => {
                 <option className="text-gray-400" value="None">
                   -- एक विकल्प छान्नुहोस् --
                 </option>
+                <option value="news">समाचार</option>
                 <option value="economic-politics">अर्थराजनीति</option>
-                <option value="news">अर्थ</option>
+                <option value="wealth">अर्थ</option>
                 <option value="bank-market">बैंक / बजार</option>
                 <option value="philosophy">दर्शन संवाद</option>
                 <option value="startup">स्टार्टअप</option>
@@ -469,9 +469,18 @@ const PackageForm = () => {
                 <option value="fuel">इन्धन</option>
                 <option value="interview">अन्तरर्वाता</option>
                 <option value="report">रिपोर्ट</option>
-                <option value="Analysis">विश्लेषण</option>
+                <option value="analysis">विश्लेषण</option>
                 <option value="blog">ब्लक</option>
                 <option value="Hotel">होटल</option>
+                <option value="biography">जिवनी</option>
+                <option value="economy">अर्थतन्त्र </option>
+                <option value="tourism">पर्यटन</option>
+                <option value="technique">प्रविधी</option>
+                <option value="corporatemarket">कर्पाेरेट बजार</option>
+                <option value="photo/feature">फोटो/फिचर </option>
+                <option value="employment">रोजगार</option>
+                <option value="international"> अन्तर्राष्ट्रिय</option>
+                <option value="newspaper">पत्रपत्रिका</option>
               </select>
             </div>
           </div>
@@ -483,7 +492,7 @@ const PackageForm = () => {
         <FormInput
           name="allTags"
           formik={formik}
-          //placeholder="शीर्षक..."
+          placeholder="शीर्षक,नमुना,ठूलो,नमुना,घर,...."
           type="text"
         />
       </div>
