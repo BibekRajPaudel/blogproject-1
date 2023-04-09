@@ -37,6 +37,8 @@ const PackageForm = () => {
     initialValues: {
       title: "",
       allTags: "",
+      link1:"",
+      link2:"",
       description1: "",
       description2: "",
       description3: "",
@@ -77,6 +79,8 @@ const PackageForm = () => {
         image5,
         image6,
         tag,
+        link1,
+        link2
       },
       actions
     ) => {
@@ -124,6 +128,8 @@ const PackageForm = () => {
         }
       }
       formData.append("title", title);
+      formData.append("link1", link1);
+      formData.append("link2", link2);
       formData.append("description1", description1);
       formData.append("description2", description2);
       formData.append("description3", description3);
@@ -405,6 +411,27 @@ const PackageForm = () => {
             type="text"
           />
         </div>
+
+        <div className="w-full">
+          <h1 className="text-[16px] font-[700] mb-3">लिङ्क १</h1>
+          <FormInput
+            name="link1"
+            formik={formik}
+            //placeholder="Enter Author..."
+            type="text"
+          />
+        </div>
+
+        <div className="w-full">
+          <h1 className="text-[16px] font-[700] mb-3">लिङ्क २</h1>
+          <FormInput
+            name="link2"
+            formik={formik}
+            //placeholder="Enter Author..."
+            type="text"
+          />
+        </div>
+
         <div className="w-full">
           <div className="w-full grid grid-cols-1 gap-3">
             <div className="w-full flex flex-col gap-2">
