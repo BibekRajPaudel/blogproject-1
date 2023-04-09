@@ -54,6 +54,10 @@ const EditNews = ({item}) => {
       tag: item.tag[0],
       link1:item.link1,
       link2:item.link2,
+      link3:item.link3,
+      link4:item.link4,
+      link5:item.link5,
+      link6:item.link6,
     },
 
     onSubmit: async (
@@ -76,7 +80,11 @@ const EditNews = ({item}) => {
         image6,
         tag,
         link1,
-        link2
+        link2,
+        link3,
+        link4,
+        link5,
+        link6
       },
       actions
     ) => {
@@ -123,6 +131,10 @@ const EditNews = ({item}) => {
       formData.append("title", title);
       formData.append("link1", link1);
       formData.append("link2", link2);
+      formData.append("link3", link3);
+      formData.append("link4", link4);
+      formData.append("link5", link5);
+      formData.append("link6", link6);
       formData.append("description1", description1);
       formData.append("description2", description2);
       formData.append("description3", description3);
@@ -371,7 +383,7 @@ const EditNews = ({item}) => {
           />
         </div>
 
-        <div className="w-full">
+        {/* <div className="w-full">
           <h1 className="text-[16px] font-[700] mb-3">लिङ्क १</h1>
           <FormInput
             name="link1"
@@ -389,7 +401,7 @@ const EditNews = ({item}) => {
             //placeholder="Enter Author..."
             type="text"
           />
-        </div>
+        </div> */}
 
         <div className="w-full">
           <div className="w-full grid grid-cols-1 gap-3">
@@ -522,6 +534,16 @@ const EditNews = ({item}) => {
         {selectedImages}
       </div> */}
 
+       <div className="w-full mt-5 px-4">
+        <h1 className="text-[16px] font-[700] mb-3">लिङ्क १</h1>
+        <FormInput
+          name="link1"
+          formik={formik}
+         // placeholder="शीर्षक,नमुना,ठूलो,नमुना,घर,...."
+          type="text"
+        />
+      </div>
+
       {/* 222222222222 */}
 
       <div className="w-full mt-5 px-4">
@@ -563,6 +585,15 @@ const EditNews = ({item}) => {
       {/* <div className="flex flex-wrap justify-around mt-5 gap-5">
         {selectedImages2}
       </div>  */}
+       <div className="w-full mt-5 px-4">
+        <h1 className="text-[16px] font-[700] mb-3">लिङ्क २</h1>
+        <FormInput
+          name="link2"
+          formik={formik}
+         // placeholder="शीर्षक,नमुना,ठूलो,नमुना,घर,...."
+          type="text"
+        />
+      </div>
 
       {/* 3333333 */}
 
@@ -606,6 +637,16 @@ const EditNews = ({item}) => {
         {selectedImages3}
       </div> */}
 
+<div className="w-full mt-5 px-4">
+        <h1 className="text-[16px] font-[700] mb-3">लिङ्क ३</h1>
+        <FormInput
+          name="link3"
+          formik={formik}
+         // placeholder="शीर्षक,नमुना,ठूलो,नमुना,घर,...."
+          type="text"
+        />
+      </div>
+
       {/* 444444 */}
 
       <div className="w-full mt-5 px-4">
@@ -647,6 +688,16 @@ const EditNews = ({item}) => {
       <div className="flex flex-wrap justify-around mt-5 gap-5">
         {selectedImages4}
       </div> */}
+
+<div className="w-full mt-5 px-4">
+        <h1 className="text-[16px] font-[700] mb-3">लिङ्क ४</h1>
+        <FormInput
+          name="link4"
+          formik={formik}
+          //placeholder="शीर्षक,नमुना,ठूलो,नमुना,घर,...."
+          type="text"
+        />
+      </div>
 
       {/* 5555 */}
 
@@ -690,6 +741,16 @@ const EditNews = ({item}) => {
         {selectedImages5}
       </div> */}
 
+<div className="w-full mt-5 px-4">
+        <h1 className="text-[16px] font-[700] mb-3">लिङ्क ५</h1>
+        <FormInput
+          name="link5"
+          formik={formik}
+          //placeholder="शीर्षक,नमुना,ठूलो,नमुना,घर,...."
+          type="text"
+        />
+      </div>
+
       {/* 666666 */}
 
       <div className="w-full mt-5 px-4">
@@ -731,6 +792,16 @@ const EditNews = ({item}) => {
       <div className="flex flex-wrap justify-around mt-5 gap-5">
         {selectedImages6}
       </div> */}
+
+<div className="w-full mt-5 px-4">
+        <h1 className="text-[16px] font-[700] mb-3">लिङ्क ६</h1>
+        <FormInput
+          name="link6"
+          formik={formik}
+         // placeholder="शीर्षक,नमुना,ठूलो,नमुना,घर,...."
+          type="text"
+        />
+      </div>
 
       <div className="flex justify-end py-5 px-4">
         <button

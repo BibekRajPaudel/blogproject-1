@@ -39,6 +39,10 @@ const PackageForm = () => {
       allTags: "",
       link1:"",
       link2:"",
+      link3:"",
+      link4:"",
+      link5:"",
+      link6:"",
       description1: "",
       description2: "",
       description3: "",
@@ -80,7 +84,11 @@ const PackageForm = () => {
         image6,
         tag,
         link1,
-        link2
+        link2,
+        link3,
+        link4,
+        link5,
+        link6,
       },
       actions
     ) => {
@@ -130,6 +138,10 @@ const PackageForm = () => {
       formData.append("title", title);
       formData.append("link1", link1);
       formData.append("link2", link2);
+      formData.append("link3", link3);
+      formData.append("link4", link4);
+      formData.append("link5", link5);
+      formData.append("link6", link6);
       formData.append("description1", description1);
       formData.append("description2", description2);
       formData.append("description3", description3);
@@ -413,26 +425,6 @@ const PackageForm = () => {
         </div>
 
         <div className="w-full">
-          <h1 className="text-[16px] font-[700] mb-3">लिङ्क १</h1>
-          <FormInput
-            name="link1"
-            formik={formik}
-            //placeholder="Enter Author..."
-            type="text"
-          />
-        </div>
-
-        <div className="w-full">
-          <h1 className="text-[16px] font-[700] mb-3">लिङ्क २</h1>
-          <FormInput
-            name="link2"
-            formik={formik}
-            //placeholder="Enter Author..."
-            type="text"
-          />
-        </div>
-
-        <div className="w-full">
           <div className="w-full grid grid-cols-1 gap-3">
             <div className="w-full flex flex-col gap-2">
               <label htmlFor="tag" className="text-[16px] font-[700] mb-3">
@@ -534,7 +526,7 @@ const PackageForm = () => {
       </div>
 
       <div className="w-full mt-5 px-4">
-        <h1 className="text-[16px] font-[700] mb-3">छवि</h1>
+        <h1 className="text-[16px] font-[700] mb-3">कभर फोटो</h1>
         <div
           {...getRootProps0()}
           className="flex justify-center items-center bg-[#FAFAFA] w-full border-[1px] border-dashed border-[#686868] h-[215px] rounded-[8px] cursor-pointer"
@@ -567,6 +559,11 @@ const PackageForm = () => {
       <div className="flex flex-wrap justify-around mt-5 gap-5">
         {selectedImages0}
       </div>
+
+      <div className="flex flex-col">
+  <div className="py-4 border-b-2 border-dotted border-black">
+  </div>
+</div>
 
       {/* 11111  */}
       <div className="w-full mt-5 px-4">
@@ -608,6 +605,21 @@ const PackageForm = () => {
       <div className="flex flex-wrap justify-around mt-5 gap-5">
         {selectedImages}
       </div>
+
+      <div className="w-full mt-5 px-4">
+        <h1 className="text-[16px] font-[700] mb-3">लिङ्क १</h1>
+        <FormInput
+          name="link1"
+          formik={formik}
+          placeholder="https://www.youtube.com/watch?v=7OysNxYDiXk&ab_channel=businessDarshan"
+          type="text"
+        />
+      </div>
+
+      <div className="flex flex-col">
+  <div className="py-4 border-b-2 border-dotted border-black">
+  </div>
+</div>
 
       {/* 222222222222 */}
 
@@ -651,6 +663,21 @@ const PackageForm = () => {
         {selectedImages2}
       </div>
 
+      <div className="w-full mt-5 px-4">
+        <h1 className="text-[16px] font-[700] mb-3">लिङ्क २</h1>
+        <FormInput
+          name="link2"
+          formik={formik}
+          placeholder=""
+          type="text"
+        />
+      </div>
+
+      <div className="flex flex-col">
+  <div className="py-4 border-b-2 border-dotted border-black">
+  </div>
+</div>
+
       {/* 3333333 */}
 
       <div className="w-full mt-5 px-4">
@@ -665,7 +692,7 @@ const PackageForm = () => {
           className="flex justify-center items-center bg-[#FAFAFA] w-full border-[1px] border-dashed border-[#686868] h-[215px] rounded-[8px] cursor-pointer"
         >
           <input
-            name="image2"
+            name="image3"
             {...getInputProps3()}
             onChange={onfileChange3}
             type="file"
@@ -693,6 +720,23 @@ const PackageForm = () => {
         {selectedImages3}
       </div>
 
+      <div className="w-full mt-5 px-4">
+        <h1 className="text-[16px] font-[700] mb-3">लिङ्क ३</h1>
+        <FormInput
+          name="link3"
+          formik={formik}
+          placeholder=""
+          type="text"
+        />
+      </div>
+
+
+      <div className="flex flex-col">
+  <div className="py-4 border-b-2 border-dotted border-black">
+  </div>
+</div>
+      
+
       {/* 444444 */}
 
       <div className="w-full mt-5 px-4">
@@ -707,7 +751,7 @@ const PackageForm = () => {
           className="flex justify-center items-center bg-[#FAFAFA] w-full border-[1px] border-dashed border-[#686868] h-[215px] rounded-[8px] cursor-pointer"
         >
           <input
-            name="image2"
+            name="image4"
             {...getInputProps4()}
             onChange={onfileChange4}
             type="file"
@@ -735,6 +779,21 @@ const PackageForm = () => {
         {selectedImages4}
       </div>
 
+      <div className="w-full mt-5 px-4">
+        <h1 className="text-[16px] font-[700] mb-3">लिङ्क ४</h1>
+        <FormInput
+          name="link4"
+          formik={formik}
+          placeholder=""
+          type="text"
+        />
+      </div>
+
+      <div className="flex flex-col">
+  <div className="py-4 border-b-2 border-dotted border-black">
+  </div>
+</div>
+
       {/* 5555 */}
 
       <div className="w-full mt-5 px-4">
@@ -749,7 +808,7 @@ const PackageForm = () => {
           className="flex justify-center items-center bg-[#FAFAFA] w-full border-[1px] border-dashed border-[#686868] h-[215px] rounded-[8px] cursor-pointer"
         >
           <input
-            name="image2"
+            name="image5"
             {...getInputProps5()}
             onChange={onfileChange5}
             type="file"
@@ -777,6 +836,22 @@ const PackageForm = () => {
         {selectedImages5}
       </div>
 
+
+      <div className="w-full mt-5 px-4">
+        <h1 className="text-[16px] font-[700] mb-3">लिङ्क ५</h1>
+        <FormInput
+          name="link5"
+          formik={formik}
+          placeholder=""
+          type="text"
+        />
+      </div>
+
+      <div className="flex flex-col">
+  <div className="py-4 border-b-2 border-dotted border-black">
+  </div>
+</div>
+
       {/* 666666 */}
 
       <div className="w-full mt-5 px-4">
@@ -791,7 +866,7 @@ const PackageForm = () => {
           className="flex justify-center items-center bg-[#FAFAFA] w-full border-[1px] border-dashed border-[#686868] h-[215px] rounded-[8px] cursor-pointer"
         >
           <input
-            name="image2"
+            name="image6"
             {...getInputProps6()}
             onChange={onfileChange6}
             type="file"
@@ -817,6 +892,16 @@ const PackageForm = () => {
 
       <div className="flex flex-wrap justify-around mt-5 gap-5">
         {selectedImages6}
+      </div>
+
+      <div className="w-full mt-5 px-4">
+        <h1 className="text-[16px] font-[700] mb-3">लिङ्क ६</h1>
+        <FormInput
+          name="link6"
+          formik={formik}
+          placeholder=""
+          type="text"
+        />
       </div>
 
       <div className="flex justify-end py-5 px-4">
