@@ -4,6 +4,7 @@ import Loginregister from "../Pages/Loginregister";
 import "./App.css";
 import Packages from "../Pages/Packages";
 import ProtectedRoutes from "../Helper/ProtectedRoutes";
+import AddAd from "../Pages/Ad";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Navigate to="/dashboard" />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/packages" element={<Packages />} />
+            <Route path="/ads" element={<AddAd />} />
           </Route>
         </Routes>
       </BrowserRouter>

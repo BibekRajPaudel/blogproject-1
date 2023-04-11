@@ -30,6 +30,8 @@ const Sidebar = () => {
                 ड्यासबोर्ड
               </p>
             </NavLink>
+
+
             <NavLink
               to="/packages"
               className={({ isActive }) =>
@@ -45,6 +47,27 @@ const Sidebar = () => {
                 खबर/समाचार
               </p>
             </NavLink>
+
+            <NavLink
+              to="/ads"
+              className={({ isActive }) =>
+                isActive
+                  ? "w-full bg-[#E6F0FF] text-primary-blue border-l-2 border-blue-500"
+                  : "w-full cursor-pointer hover:text-primary-lightblue transition-all duration-100 ease-in-out hover:bg-slate-100"
+              }
+            >
+              <p className="w-full text-subbody2 tracking-wide flex items-center gap-2 pl-7 pt-5 pb-5  font-poppins">
+                <span className="text-lg">
+                  <BiUserCircle />
+                </span>{" "}
+               
+              विज्ञापनहरू
+              </p>
+            </NavLink>
+
+
+
+
           </div>
         </div>
       </div>
