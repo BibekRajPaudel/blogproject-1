@@ -165,6 +165,29 @@ const PackageForm = () => {
       setLoading(false);
       window.location.reload();
     },
+
+    validate: (values) => {
+      const errors = {};
+      if (!values.title) {
+        errors.title = "शीर्षक आवश्यक छ";
+      }
+      if (!values.author) {
+        errors.author = "लेखक आवश्यक छ";
+      }
+      if (!values.allTags) {
+        errors.allTags = "थप ट्याग आवश्यक छ";
+      }
+      if (!values.subDescription) {
+        errors.subDescription = "उपविवरण आवश्यक छ";
+      }
+      if (!values.description1) {
+        errors.description1 = "विवरण-१ आवश्यक छ";
+      }
+      if (!values.image0) {
+        errors.image0 = "कभर फोटो आवश्यक छ";
+      }
+      return errors;
+    },
   });
 
   const onfileChange0 = () => {
@@ -401,6 +424,7 @@ const PackageForm = () => {
     </div>
   ));
 
+
   return (
     <form onSubmit={formik.handleSubmit}>
       <div className="grid grid-cols-2 gap-5 px-4">
@@ -412,7 +436,11 @@ const PackageForm = () => {
             //placeholder="शीर्षक..."
             type="text"
           />
+          {formik.errors.title && formik.touched.title && (
+          <div style={{ color: "red" }}></div>
+          )}
         </div>
+
 
         <div className="w-full">
           <h1 className="text-[16px] font-[700] mb-3">लेखक</h1>
@@ -422,6 +450,9 @@ const PackageForm = () => {
             //placeholder="Enter Author..."
             type="text"
           />
+          {formik.errors.author && formik.touched.author && (
+          <div style={{ color: "red" }}></div>
+          )}
         </div>
 
         <div className="w-full">
@@ -514,6 +545,9 @@ const PackageForm = () => {
           placeholder="शीर्षक,नमुना,ठूलो,नमुना,घर,...."
           type="text"
         />
+        {formik.errors.allTags && formik.touched.allTags && (
+          <div style={{ color: "red" }}></div>
+          )}
       </div>
 
       <div className="w-full mt-5 px-4">
@@ -523,6 +557,9 @@ const PackageForm = () => {
           formik={formik}
           type="text"
         />
+        {formik.errors.subDescription && formik.touched.subDescription && (
+          <div style={{ color: "red" }}></div>
+          )}
       </div>
 
       <div className="w-full mt-5 px-4">
@@ -554,6 +591,9 @@ const PackageForm = () => {
             ? formik.errors["image0"]
             : null}
         </div>
+        {formik.errors.image0 && formik.touched.image0 && (
+          <div style={{ color: "red" }}></div>
+          )}
       </div>
 
       <div className="flex flex-wrap justify-around mt-5 gap-5">

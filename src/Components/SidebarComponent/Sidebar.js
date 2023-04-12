@@ -1,7 +1,9 @@
 import React from "react";
-import { BiUserCircle } from "react-icons/bi";
+import { BiUserCircle,BiBadge, BiNews } from "react-icons/bi";
 import { MdOutlineDashboard } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom"
+import { SlSocialYoutube } from "react-icons/sl";
+
 
 const Sidebar = () => {
   return (
@@ -42,7 +44,7 @@ const Sidebar = () => {
             >
               <p className="w-full text-subbody2 tracking-wide flex items-center gap-2 pl-7 pt-5 pb-5  font-poppins">
                 <span className="text-lg">
-                  <BiUserCircle />
+                  <BiNews />
                 </span>{" "}
                 खबर/समाचार
               </p>
@@ -58,10 +60,27 @@ const Sidebar = () => {
             >
               <p className="w-full text-subbody2 tracking-wide flex items-center gap-2 pl-7 pt-5 pb-5  font-poppins">
                 <span className="text-lg">
-                  <BiUserCircle />
+                  <BiBadge />
                 </span>{" "}
                
               विज्ञापनहरू
+              </p>
+            </NavLink>
+
+            <NavLink
+              to="/videos"
+              className={({ isActive }) =>
+                isActive
+                  ? "w-full bg-[#E6F0FF] text-primary-blue border-l-2 border-blue-500"
+                  : "w-full cursor-pointer hover:text-primary-lightblue transition-all duration-100 ease-in-out hover:bg-slate-100"
+              }
+            >
+              <p className="w-full text-subbody2 tracking-wide flex items-center gap-2 pl-7 pt-5 pb-5  font-poppins">
+                <span className="text-lg">
+                  <SlSocialYoutube />
+                </span>{" "}
+               
+                भिडियोहरू
               </p>
             </NavLink>
 

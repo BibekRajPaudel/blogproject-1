@@ -5,6 +5,7 @@ import "./App.css";
 import Packages from "../Pages/Packages";
 import ProtectedRoutes from "../Helper/ProtectedRoutes";
 import AddAd from "../Pages/Ad";
+import AddVideos from "../Pages/Videos";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/packages" element={<Packages />} />
             <Route path="/ads" element={<AddAd />} />
+            <Route path="/videos" element={<AddVideos />} />
           </Route>
         </Routes>
       </BrowserRouter>
