@@ -50,7 +50,7 @@ const PackageForm = () => {
       description5: "",
       description6: "",
       author: "",
-      subDescription: "",
+      subDescription: "", 
       category: "",
       image0: "",
       image1: "",
@@ -531,6 +531,8 @@ const PackageForm = () => {
                 <option value="employment">रोजगार</option>
                 <option value="international"> अन्तर्राष्ट्रिय</option>
                 <option value="newspaper">पत्रपत्रिका</option>
+                <option value="crime">अपराध</option>
+                <option value="cinema">सिनेमा</option>
               </select>
             </div>
           </div>
